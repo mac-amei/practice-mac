@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>一冊ですべて見につくHTML&CSS</title>
+        <meta name="description" content="HTML＆CSSの練習サイト">
+        
+    </head>
+
+    <body>
+        <h2>表を作ろう</h2>
+        <table border="1">
+            <tr>
+                <th>プラン名</th>
+                <th>料金</th>
+            </tr>
+            <tr>
+                <th>わくわくプラン</th>
+                <th>月額2,900円</th>
+            </tr>
+            <tr>
+                <th>にこにこプラン</th>
+                <th>月額1,900円</th>
+            </tr>
+        </table>
+
+        <table border="1">
+            <tr>
+                <th colspan="2">プラン名:料金</th>
+            </tr>
+            <tr>
+                <th rowspan="2">わくわくプラン<br>にこにこプラン</th>
+                <th>月額2,900円</th>
+            </tr>
+            <tr>
+                <th>月額1,900円</th>
+            </tr>
+        </table>
+        
+        <h2>フォームを作ろう</h2>
+        <form action="example.php" method="post" name="amei-form">
+            名前：<input type="text" placeholder="山田 太郎"><br>
+            ラジオボタン：<input type="radio" name="gender" value="男">男
+            <input type="radio" name="gender" value="女">女
+            <input type="radio" name="gender" value="その他">その他
+            <!--nameでグループを決めることでグループの中で1つのみ選択するように設定できる
+            valueは出力先の結果かもフロントでは変化が無いけど入れておく-->
+
+        </form>
+
+
+
+    </body>
+</html>
