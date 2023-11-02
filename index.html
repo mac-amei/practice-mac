@@ -4,13 +4,16 @@
         <meta charset="UTF-8">
         <title>一冊ですべて見につくHTML&CSS</title>
         <meta name="description" content="HTML＆CSSの練習サイト">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200&family=Rampart+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <h2>表を作ろう</h2>
-        <table border="1">
-            <tr>
+        <table border="1" class="table">
+            <tr class="table-tr">
                 <th>プラン名</th>
                 <th>料金</th>
             </tr>
@@ -24,7 +27,7 @@
             </tr>
         </table>
 
-        <table border="1">
+        <table border="1" class="table">
             <tr>
                 <th colspan="2">プラン名:料金</th>
             </tr>
@@ -40,13 +43,81 @@
         <h2>フォームを作ろう</h2>
         <form action="example.php" method="post" name="amei-form">
             名前：<input type="text" placeholder="山田 太郎"><br>
-            ラジオボタン：<input type="radio" name="gender" value="男">男
-            <input type="radio" name="gender" value="女">女
-            <input type="radio" name="gender" value="その他">その他
+            ラジオボタン：<input type="radio" name="gender" value="男" id="man"><label for="man">男</label>
+            <input type="radio" name="gender" value="女" id="woman"><label for="woman">女</label>
+            <input type="radio" name="gender" value="その他" id="po"><label for="po">その他</label><br>
             <!--nameでグループを決めることでグループの中で1つのみ選択するように設定できる
             valueは出力先の結果かもフロントでは変化が無いけど入れておく-->
+            チェックボックス：
+            <input type="checkbox" name="number" value="1" checked>1
+            <input type="checkbox" name="number" value="2" >2
+            <input type="checkbox" name="number" value="2" >3
+            <input type="checkbox" name="number" value="2" >4<br>
+            送信ボタン：<input type="submit" value="送信"><br>
+            血液型：
+            <select name="bloodtype">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="O">O</option>
+                <option value="AB">AB</option>
+                <option value="不明">不明</option>
+            </select><br>
+            複数行入力：
+            <textarea name="text" placeholder="テキストを入力"></textarea>
 
         </form>
+
+        <header>
+            <h1>ページのタイトル</h1>
+            <p>このWEBサイトはWEB業界の最新情報をお伝えしています。</p>
+            <nav>
+                <ul>
+                    <li><a href="#">サービス紹介</a></li>
+                    <li><a href="#">料金</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <article>
+            <h2>記事のタイトル</h2>
+            <p>読み物、記事の部分を作るタグ</p>
+        </article>
+        <section>
+            <h2>その他のおすすめ記事</h2>
+            <p>意味のあるグループのまとまりで使用するタグ、テーマをまとめるときに使用する。</p>
+        </section>
+        <aside>
+            <h3>サイドメニュータイトル</h3>
+            <p>サイドバーに使用することが多い</p>
+            <div>
+                <p>意味の持たないものをまとめるときはdivを使う</p>
+            </div>
+        </aside>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+            </ul>
+            <p>Copyright 2023 amei</p>
+        </footer>
+
+        <div class="container">
+            <div class="item">item1</div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">item1</div>
+            <div class="grid-item">item2</div>
+            <div class="grid-item">item3</div>
+            <div class="grid-item">item4</div>
+            <div class="grid-item">item5</div>
+            <div class="grid-item">item6</div>
+
+        </div>
 
 
 
